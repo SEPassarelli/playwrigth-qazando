@@ -27,7 +27,7 @@ test('Login com sucesso', async ({ page }) => {
   await page.locator('#password').screenshot({ path: './screenshot/elementosenha.png' });
   await page.screenshot({ path: './screenshot/screenshot.png' });
   await page.getByRole('button', { name: 'login' }).click();
-  //await page.getByRole('button', { name: 'OK' }).click();
+  await page.getByRole('button', { name: 'OK' }).click();
 });
 
 
