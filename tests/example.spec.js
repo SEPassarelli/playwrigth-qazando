@@ -16,10 +16,6 @@ test.beforeEach(async ({ page }) => {
 
 test('Login com sucesso', async ({ page }) => {
 
-  // const button = await page.getByRole('button', { name: 'Send Mail' });
-  // await button.scrollIntoViewIfNeeded();
-  // await button.click();
-
   const texto = await page.waitForSelector('text=NEWSLETTER')
   await texto.scrollIntoViewIfNeeded();
 
@@ -31,7 +27,7 @@ test('Login com sucesso', async ({ page }) => {
   await page.locator('#password').screenshot({ path: './screenshot/elementosenha.png' });
   await page.screenshot({ path: './screenshot/screenshot.png' });
   await page.getByRole('button', { name: 'login' }).click();
-  await page.getByRole('button', { name: 'OK' }).click();
+  //await page.getByRole('button', { name: 'OK' }).click();
 });
 
 
